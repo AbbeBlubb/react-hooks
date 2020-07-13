@@ -1,15 +1,15 @@
 import React, {useState} from 'react'
 
 // useState with primitive
-function HookCounterOne() {
+function CounterHook1Primitive() {
 
   const [count, setCount] = useState(0)
 
   return (
-    <div>
+    <>
       <button onClick={() => setCount(count + 1)}>Count {count}</button>
-    </div>
+    </>
   )
 }
 
-export default HookCounterOne
+export default CounterHook1Primitive

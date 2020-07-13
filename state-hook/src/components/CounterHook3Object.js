@@ -1,25 +1,38 @@
 import React, { useState } from 'react'
 
-// useState with objekt
-function HookCounterThree() {
+// useState with object, spread operator
+function CounterHook3Object() {
+
 	const [name, setName] = useState({ firstName: '', lastName: '' })
+
 	return (
 		<form>
+
 			<input
 				type="text"
 				value={name.firstName}
 				onChange={e => setName({ ...name, firstName: e.target.value })}
 			/>
+
 			<input
 				type="text"
 				value={name.lastName}
 				onChange={e => setName({ ...name, lastName: e.target.value })}
 			/>
-			<h2>Your first name is - {name.firstName}</h2>
-			<h2>Your last name is - {name.lastName}</h2>
-			<h2>{JSON.stringify(name)}</h2>
+
+			<p>
+				Your first name is - {name.firstName}
+				<br/>
+				Your last name is - {name.lastName}
+			</p>
+
+			{/* Objects are not valid as a React child */}
+			<p>
+				{JSON.stringify(name)}
+			</p>
+
 		</form>
 	)
 }
 
-export default HookCounterThree
+export default CounterHook3Object

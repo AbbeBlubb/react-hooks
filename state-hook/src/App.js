@@ -1,39 +1,41 @@
 import React, { Component } from 'react'
 import './App.css'
-import ClassCounterOne from './components/ClassCounterOne'
-import HookCounterOne from './components/HookCounterOne'
-import HookCounterTwo from './components/HookCounterTwo'
-import HookCounterThree from './components/HookCounterThree'
-import ClassCounterTwo from './components/ClassCounterTwo'
-import HookCounterFour from './components/HookCounterFour'
+import CounterClass1 from './components/CounterClass1'
+import CounterClass2 from './components/CoutnerClass2'
+import CounterHook1Primitive from './components/CounterHook1Primitive'
+import CounterHook2PrevState from './components/CounterHook2PrevState'
+import CounterHook3Object from './components/CounterHook3Object'
+import CounterHook4Array from './components/CounterHook4Array'
 
 class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<h1>ClassCounterOne- class</h1>
-				<ClassCounterOne />
+
+				<h2>CounterClass1 - class</h2>
+				<CounterClass1 />
 				<hr/>
 
-				<h1>ClassCounterTwo - class, prevState</h1>
-				<ClassCounterTwo />
+				<h2>CounterClass2 - class, prevState</h2>
+				<CounterClass2 />
 				<hr/>
 
-				<h1>HookCounterOne - useState with primitive</h1>
-				<HookCounterOne />
+				<h2>CounterHook1Primitive - useState with primitive</h2>
+				<CounterHook1Primitive />
 				<hr/>
 
-				<h1>HookCounterTwo - useState, prevState</h1>
-				<HookCounterTwo />
+				<h2>CounterHook2PrevState - useState, prevState</h2>
+				<CounterHook2PrevState />
 				<hr/>
 
-				<h1>HookCounterThree useState with object</h1>
-				<HookCounterThree />
+				<h2>CounterHook3Object - useState with object</h2>
+				<CounterHook3Object />
 				<hr/>
 
-				<h1>HookCounterFour</h1>
-				<HookCounterFour />
+				<h2>CounterHook4Array - useStaste with array</h2>
+				<CounterHook4Array />
 				<hr/>
+
 			</div>
 		)
 	}

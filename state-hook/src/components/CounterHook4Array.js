@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
-function HookCounterFour() {
+// useState with array, spread operator
+function CounterHook4Array() {
+
 	const [items, setItems] = useState([])
 
 	const addItem = () => {
@@ -14,15 +16,18 @@ function HookCounterFour() {
 	}
 
 	return (
-		<div>
+		<>
+
 			<button onClick={addItem}>Add a number</button>
+
 			<ul>
 				{items.map(item => (
 					<li key={item.id}>{item.value}</li>
 				))}
 			</ul>
-		</div>
+
+		</>
 	)
 }
 
-export default HookCounterFour
+export default CounterHook4Array
