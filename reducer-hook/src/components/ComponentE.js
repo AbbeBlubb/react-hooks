@@ -3,9 +3,10 @@ import ComponentF from './ComponentF'
 
 function ComponentE() {
 	return (
-		<div>
-			Component E<ComponentF />
-		</div>
+		<>
+			<p>ComponentE, renders ComponentF:</p>
+			<ComponentF />
+		</>
 	)
 }
 

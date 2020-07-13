@@ -1,6 +1,10 @@
 import React, { useReducer } from 'react'
 
+
+// Two dispatches from two useReducer hooks, one shared reducer
+
 const initialState = 0
+
 const reducer = (state, action) => {
 	switch (action) {
 		case 'increment':
@@ -19,17 +23,17 @@ function CounterThree() {
 	const [countTwo, dispatchTwo] = useReducer(reducer, initialState)
 
 	return (
-		<div>
-			<div>Count = {count}</div>
+		<>
+			<p>Count dispatch1 = {count}</p>
 			<button onClick={() => dispatch('increment')}>Increment</button>
 			<button onClick={() => dispatch('decrement')}>Decrement</button>
 			<button onClick={() => dispatch('reset')}>Reset</button>
 
-			<div>Count = {countTwo}</div>
+			<p>Count dispatch2 = {countTwo}</p>
 			<button onClick={() => dispatchTwo('increment')}>Increment</button>
 			<button onClick={() => dispatchTwo('decrement')}>Decrement</button>
 			<button onClick={() => dispatchTwo('reset')}>Reset</button>
-		</div>
+		</>
 	)
 }
 
