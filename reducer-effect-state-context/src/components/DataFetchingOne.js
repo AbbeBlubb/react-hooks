@@ -26,7 +26,7 @@ function DataFetchingOne() {
 
   return (
     <>
-      <p>DataFetchingOne - loading or fetched title:</p>
+      <p>DataFetchingOne - 'loading' or fetched title:</p>
       --&gt; {loading ? 'Loading' : post.title} &lt;--
 
       <p>DataFetchingOne - error or null:</p>
