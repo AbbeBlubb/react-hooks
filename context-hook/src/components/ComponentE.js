@@ -1,12 +1,18 @@
 import React, { useContext } from 'react'
-import ComponentF from './ComponentF'
-import { UserContext, ChannelContext } from '../App'
+import { UserContext, CityContext } from '../App'
 
 function ComponentE() {
 
+  // Get the contexts into vars
   const user = useContext(UserContext)
-  const channel = useContext(ChannelContext)
-  return <div> User is {user} and channel is {channel}</div>
+  const city = useContext(CityContext)
+
+  return(
+    <>
+      <p>ComponentE, uses useContext hook:</p>
+      <p>User is {user} and city is {city}</p>
+    </>
+  )
 }
 
 export default ComponentE

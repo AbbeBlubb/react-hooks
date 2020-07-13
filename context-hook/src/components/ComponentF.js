@@ -1,5 +1,5 @@
 import React from 'react'
-import { UserContext, ChannelContext } from '../App'
+import { UserContext, CityContext } from '../App'
 
 function ComponentF() {
 	return (
@@ -7,11 +7,16 @@ function ComponentF() {
 			<UserContext.Consumer>
 				{user => {
 					return (
-						<ChannelContext.Consumer>
+						<CityContext.Consumer>
 							{channel => {
-                return <div>User context value {user}, channel context value {channel}</div>
+                return (
+									<>
+										<p>Component F, old-style Consumer:</p>
+										User context value {user}, channel context value {channel}
+									</>
+								)
 							}}
-						</ChannelContext.Consumer>
+						</CityContext.Consumer>
 					)
 				}}
 			</UserContext.Consumer>
