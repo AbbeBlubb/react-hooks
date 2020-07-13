@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
-function HookMouse() {
+// useEffect dependency array=[] -> will never re-run
+// Because of listeners, useEffect is not needed to re-run
+// Remove listener on unmount with return statement in useEffect hook
+function MousemoveHook() {
+
 	const [x, setX] = useState(0)
 	const [y, setY] = useState(0)
 
@@ -11,19 +15,21 @@ function HookMouse() {
 	}
 
 	useEffect(() => {
-		console.log('useFffect called')
+		console.log('MousemoveHook: useFffect called')
     window.addEventListener('mousemove', logMousePosition)
 
     return () => {
-      console.log('Component unmounting code')
+      console.log('MousemoveHook: component unmounting code')
       window.removeEventListener('mousemove', logMousePosition)
     }
 	}, [])
+
 	return (
-		<div>
-			Hooks - X - {x} Y - {y}
-		</div>
+		<>
+			X - {x} <br/> 
+			Y - {y}
+		</>
 	)
 }
 
-export default HookMouse
+export default MousemoveHook

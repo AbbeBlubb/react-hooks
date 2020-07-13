@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-// prevState, initialCount
+// prevState with function in setter, initialCount
 function CounterHook2PrevState() {
 	const initialCount = 0
 	const [count, setCount] = useState(initialCount)
@@ -13,7 +13,7 @@ function CounterHook2PrevState() {
 
 	return (
 		<>
-			Count: {count}
+			Count: {count} &nbsp;
 			<button onClick={() => setCount(initialCount)}>
 				Reset
 			</button>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class ClassMouse extends Component {
+export default class MousemoveClass extends Component {
 	constructor(props) {
 		super(props)
 
@@ -24,11 +24,10 @@ class ClassMouse extends Component {
 
 	render() {
 		return (
-			<div>
-				X - {this.state.x} Y - {this.state.y}
-			</div>
+			<>
+				X - {this.state.x} <br/>
+				Y - {this.state.y}
+			</>
 		)
 	}
 }
-
-export default ClassMouse

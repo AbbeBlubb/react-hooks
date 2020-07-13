@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import CounterClass1 from './components/CounterClass1'
-import CounterClass2 from './components/CoutnerClass2'
+import CounterClass2 from './components/CounterClass2'
 import CounterHook1Primitive from './components/CounterHook1Primitive'
 import CounterHook2PrevState from './components/CounterHook2PrevState'
 import CounterHook3Object from './components/CounterHook3Object'
