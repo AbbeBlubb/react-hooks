@@ -2,9 +2,10 @@
 
 - useState
 - useEffect
-- useContext
-- useReducer
+- useContext, old-style Context-Consumer
+- useReducer, useEffect, useState, useContext
+- useCallback, React.memo(Component)
 
 memo
 ref
-callback
+custom

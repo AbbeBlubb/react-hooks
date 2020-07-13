@@ -7,7 +7,7 @@ function ComponentF() {
 
   return (
     <>
-      <p>ComponentF, consumes CountContext created in App.js</p> 
+      <p>ComponentF, consumes CountContext created in App.js with useContext hook</p> 
       Count in ComponentF: {countContext.countState}<br/>
 
       <button onClick={() => countContext.countDispatch('increment')}>Increment</button>

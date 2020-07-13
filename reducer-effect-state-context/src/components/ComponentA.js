@@ -8,7 +8,7 @@ function ComponentA() {
 
   return (
     <>
-      <p>ComponentA, consumes CountContext</p>
+      <p>ComponentA, consumes CountContext with useContext hook</p>
       Count in ComponentA: {countContext.countState}<br/>
 
       <button onClick={() => countContext.countDispatch('increment')}>Increment</button>
