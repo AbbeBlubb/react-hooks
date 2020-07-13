@@ -11,23 +11,23 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<h1>ClassCounterOne</h1>
+				<h1>ClassCounterOne- class</h1>
 				<ClassCounterOne />
 				<hr/>
 
-				<h1>ClassCounterTwo</h1>
+				<h1>ClassCounterTwo - class, prevState</h1>
 				<ClassCounterTwo />
 				<hr/>
 
-				<h1>HookCounterOne</h1>
+				<h1>HookCounterOne - useState with primitive</h1>
 				<HookCounterOne />
 				<hr/>
 
-				<h1>HookCounterTwo</h1>
+				<h1>HookCounterTwo - useState, prevState</h1>
 				<HookCounterTwo />
 				<hr/>
 
-				<h1>HookCounterThree</h1>
+				<h1>HookCounterThree useState with object</h1>
 				<HookCounterThree />
 				<hr/>
 

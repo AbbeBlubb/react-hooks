@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+// useState with objekt
 function HookCounterThree() {
 	const [name, setName] = useState({ firstName: '', lastName: '' })
 	return (
