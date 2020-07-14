@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react'
 
+
 function Counter() {
 	const [counterOne, setCounterOne] = useState(0)
 	const [counterTwo, setCounterTwo] = useState(0)
@@ -10,13 +11,15 @@ function Counter() {
 
 	const incrementTwo = () => {
 		setCounterTwo(counterTwo + 1)
-  }
+	}
 
-  const isEven = useMemo(() => {
-    let i = 0
-    while (i < 2000000000) i++
-    return counterOne % 2 === 0
-  }, [counterOne])
+	// When state changes, even if it's only the counterTwo var, the whole component rerenders, and isEven is called again.
+	// useMemo returnes a cached value. React will recompute the cached value only if the functions dependencies have changed.
+	const isEven = useMemo(() => {
+		let i = 0
+		while (i < 2000000000) i++
+		return counterOne % 2 === 0
+	}, [counterOne])
 
 	return (
 		<>
