@@ -19,15 +19,22 @@ function Counter() {
   }, [counterOne])
 
 	return (
-		<div>
+		<>
 			<div>
-        <button onClick={incrementOne}>Count One - {counterOne}</button>
-        <span>{isEven ? 'Even' : 'Odd'}</span>
+				<h3>Counter1</h3>
+				<p>Uses a useMemo hook with function with extreme long loop, listens to counterOne var</p>
+        		Count: {counterOne}<br/>
+        		Even or odd: {isEven ? 'Even' : 'Odd'}<br/>
+				<button onClick={incrementOne}>Add 1</button>
 			</div>
+
 			<div>
-        <button onClick={incrementTwo}>Count Two - {counterTwo}</button>
+				<h3>Counter2</h3>
+				<p>In same component as Counter1</p>
+				Count: {counterTwo}<br/>
+        		<button onClick={incrementTwo}>Add 2</button>
 			</div>
-		</div>
+		</>
 	)
 }
 
