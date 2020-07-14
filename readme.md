@@ -7,8 +7,8 @@
 - useReducer, useEffect, useState, useContext
 - useCallback, memo(Component)
 - useMemo
+- useRef
 
-ref
 custom
 
 ## Notes
@@ -17,3 +17,5 @@ custom
     - While useCallback returns the function without calling it (reference equality is important for child rerender; if you want to use function as callback). The function will be cached.
 - memo vs. PureComponent
     - memo checks for prop changes for rerender, PureComponent implements shouldComponentUpdate
+- useRef
+    - Stores immutable data between renders

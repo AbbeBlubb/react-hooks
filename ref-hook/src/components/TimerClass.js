@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class ClassTimer extends Component {
+class TimerClass extends Component {
 
   interval
   constructor(props) {
@@ -13,7 +13,7 @@ class ClassTimer extends Component {
 
   componentDidMount() {
     this.interval = setInterval(() => {
-      this.setState(prevState => (this.setState({timer: prevState.timer + 1})))
+      this.setState(prevState => ({timer: prevState.timer + 1 }))
     }, 1000)
   }
 
@@ -23,12 +23,12 @@ class ClassTimer extends Component {
 
   render() {
     return (
-      <div>
-        Class Timer - {this.state.timer} -
-        <button onClick={() => clearInterval(this.interval)}>Clear Timer</button>
-      </div>
+      <>
+        Timer with setInterval, class - {this.state.timer} - <br/>
+        <button onClick={() => clearInterval(this.interval)}>Clear interval in timer</button>
+      </>
     )
   }
 }
 
-export default ClassTimer
+export default TimerClass
