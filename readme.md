@@ -8,8 +8,7 @@
 - useCallback, memo(Component)
 - useMemo
 - useRef
-
-custom
+- custom hooks: counter, form
 
 ## Notes
 - useMemo vs. useCallback

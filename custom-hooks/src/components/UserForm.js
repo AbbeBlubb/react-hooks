@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react';
 import useInput from '../hooks/useInput';
 
+
 function UserForm() {
+  // Destructure the array returned from the custom hook
   const [firstName, bindFirstName, resetFirstName] = useInput('')
   const [lastName, bindLastName, resetLastName] = useInput('')
 
@@ -11,8 +13,9 @@ function UserForm() {
     resetFirstName()
     resetLastName()
   }
+
 	return (
-		<div>
+		<>
       <form onSubmit={submitHandler}>
 				<div>
 					<label>First Name</label>
@@ -20,6 +23,12 @@ function UserForm() {
             type="text"
             {...bindFirstName}
 					/>
+          {/*
+          <input 
+            type='text'
+            value={firstName}
+            onChange={() => setFirstName(e.target.value)}
+          */}
 				</div>
 				<div>
 					<label>Last Name</label>
@@ -30,7 +39,7 @@ function UserForm() {
         </div>
         <button>Submit</button>
 			</form>
-		</div>
+		</>
 	)
 }
 

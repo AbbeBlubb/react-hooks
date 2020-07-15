@@ -9,10 +9,19 @@ import UserForm from './components/UserForm'
 function App() {
 	return (
 		<div className="App">
-			{/* <DocTitleOne /> */}
-			{/* <DocTitleTwo /> */}
-			{/* <CounterOne /> */}
-			{/* <CounterTwo /> */}
+			<h3>Change doc title 1, custom hook</h3>
+			<DocTitleOne />
+			
+			<h3>Change dock title 2, component shares the custom hook</h3>
+			<DocTitleTwo />
+
+			<h3>Counter 1, custom hook</h3>
+			<CounterOne />
+
+			<h3>Counter 2, component shares the custom hook</h3>
+			<CounterTwo />
+
+			<h3>Form</h3>
 			<UserForm />
 		</div>
 	)
